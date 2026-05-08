@@ -1,4 +1,4 @@
-# Shale-Namma Pride (ನಮ್ಮ ಶಾಲೆ - Our School Pride)
+# Shale-Namma Pride 
 
 A "School Transparency & Pride" Android app that showcases daily school life to rebuild trust between government schools and parents.
 
@@ -63,14 +63,14 @@ A "School Transparency & Pride" Android app that showcases daily school life to 
 
 ## Role-Based Access
 
-| Feature | Teacher | Student | Parent |
+| Feature | Teacher | Parent |
 |---------|----------|---------|--------|
-| Add Meal | ✅ | ❌ | ❌ |
-| Upload Images | ✅ | ❌ | ❌ |
-| Edit/Delete Achievements | ✅ | ❌ | ❌ |
-| Submit Feedback | ❌ | ❌ | ✅ |
-| View Feedback | ✅ | ❌ | ❌ |
-| Like Achievements | ✅ | ✅ | ✅ |
+| Add Meal | ✅ | ❌ |
+| Upload Images | ✅ | ❌ |
+| Edit/Delete Achievements | ✅ | ❌ |
+| Submit Feedback | ❌ | ✅ |
+| View Feedback | ✅ | ❌ |
+| Like Achievements | ✅ | ✅ |
 
 ---
 
