@@ -64,7 +64,7 @@ A "School Transparency & Pride" Android app that showcases daily school life to 
 ## Role-Based Access
 
 | Feature | Teacher | Parent |
-|---------|----------|---------|--------|
+|---------|---------|--------|
 | Add Meal | ✅ | ❌ |
 | Upload Images | ✅ | ❌ |
 | Edit/Delete Achievements | ✅ | ❌ |
