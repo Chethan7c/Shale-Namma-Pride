@@ -25,7 +25,7 @@ A "School Transparency & Pride" Android app that showcases daily school life to 
 
 | Home | Meals | Gallery | Achievements |
 |-------|-------|---------|--------------|
-| ![Home](screenshots/home.png) | ![Meals](screenshots/meals.png) | ![Gallery](screenshots/gallery.png) | ![Achievements](screenshots/achievements.png) |
+| ![Home](screenshots/home.jpeg) | ![Meals](screenshots/meals.jpeg) | ![Gallery](screenshots/gallery.jpeg) | ![Achievements](screenshots/achievements.jpeg) |
 
 ---
 
