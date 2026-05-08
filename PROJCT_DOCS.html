@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PROJCT_DOCS.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="shale-namma-pride---complete-project-documentation">Shale-Namma Pride - Complete Project Documentation</h1>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#project-overview">Project Overview</a></li>
+<li><a href="#problem-statement">Problem Statement</a></li>
+<li><a href="#vision--solution">Vision &amp; Solution</a></li>
+<li><a href="#features-implementation">Features Implementation</a></li>
+<li><a href="#technical-architecture">Technical Architecture</a></li>
+<li><a href="#technology-stack">Technology Stack</a></li>
+<li><a href="#role-based-access-control">Role-Based Access Control</a></li>
+<li><a href="#database-schema">Database Schema</a></li>
+<li><a href="#frontend-implementation">Frontend Implementation</a></li>
+<li><a href="#backend-implementation">Backend Implementation</a></li>
+<li><a href="#workflows">Workflows</a></li>
+<li><a href="#setup-instructions">Setup Instructions</a></li>
+<li><a href="#api-reference">API Reference</a></li>
+<li><a href="#uiux-guidelines">UI/UX Guidelines</a></li>
+</ol>
+<hr>
+<h2 id="project-overview">Project Overview</h2>
+<p><strong>Project Name:</strong> Shale-Namma Pride</p>
+<p><strong>Type:</strong> Android Mobile Application</p>
+<p><strong>Purpose:</strong> A &quot;School Transparency &amp; Pride&quot; portal that showcases daily school life to rebuild trust between government schools and parents.</p>
+<p><strong>Target Audience:</strong></p>
+<ul>
+<li>Parents</li>
+<li>Teachers</li>
+<li>Students</li>
+</ul>
+<hr>
+<h2 id="problem-statement">Problem Statement</h2>
+<h3 id="the-challenge">The Challenge</h3>
+<p>Many government schools in India have significantly improved their infrastructure:</p>
+<ul>
+<li>Smart classrooms with digital boards</li>
+<li>Modern science and computer labs</li>
+<li>Improved mid-day meal quality</li>
+<li>Better toilet and facility maintenance</li>
+</ul>
+<p><strong>However:</strong> Parents in villages remain unaware of these upgrades, leading them to choose expensive private schools over local government schools.</p>
+<h3 id="the-impact">The Impact</h3>
+<ul>
+<li>Loss of trust in public education system</li>
+<li>Financial burden on low-income families</li>
+<li>Underutilization of government school infrastructure</li>
+<li>Widening educational inequality</li>
+</ul>
+<hr>
+<h2 id="vision--solution">Vision &amp; Solution</h2>
+<h3 id="shale-namma-pride-portal">Shale-Namma Pride Portal</h3>
+<p>A mobile application that serves as a <strong>transparency portal</strong> and <strong>community pride platform</strong>:</p>
+<ol>
+<li><strong>Daily Life Showcase</strong> - Photos of mid-day meals, lab experiments, sports activities</li>
+<li><strong>Transparency Bridge</strong> - Parents see real improvements → trust rebuilt</li>
+<li><strong>Community Engagement</strong> - Feedback system, achievements celebration</li>
+<li><strong>Language Accessibility</strong> - Kannada/English toggle for local parents</li>
+</ol>
+<h3 id="success-criteria-met">Success Criteria Met</h3>
+<table>
+<thead>
+<tr>
+<th>Criteria</th>
+<th>Status</th>
+<th>Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>One meal update per day</td>
+<td>✅</td>
+<td>Backend enforcement in <code>MealRepositoryImpl</code></td>
+</tr>
+<tr>
+<td>Feedback stored anonymously</td>
+<td>✅</td>
+<td>Parents ALWAYS anonymous</td>
+</tr>
+<tr>
+<td>Child-friendly UI</td>
+<td>✅</td>
+<td>Material 3, emojis, warm colors</td>
+</tr>
+<tr>
+<td>Kannada support</td>
+<td>✅</td>
+<td>Full i18n with AI translation</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="features-implementation">Features Implementation</h2>
+<h3 id="1-meals-system">1. Meals System</h3>
+<p><strong>What it does:</strong></p>
+<ul>
+<li>Teachers upload daily mid-day meal photos with menu</li>
+<li>Only ONE meal update allowed per day (enforced at backend)</li>
+<li>Previous meals accessible in a scrollable feed</li>
+<li>Full-screen image viewer for detailed viewing</li>
+</ul>
+<p><strong>Key Files:</strong></p>
+<ul>
+<li><code>MealsScreen.kt</code> - UI for meal display</li>
+<li><code>MealViewModel.kt</code> - State management</li>
+<li><code>MealRepositoryImpl.kt</code> - Backend logic with date enforcement</li>
+</ul>
+<p><strong>Workflow:</strong></p>
+<pre class="hljs"><code><div>Teacher logs in → Clicks &quot;Add Meal&quot; → Uploads photo + enters menu → 
+Saves → If meal exists for today, updates it; otherwise creates new
+</div></code></pre>
+<p><strong>Role Access:</strong></p>
+<ul>
+<li>Teacher: Can add/update meals</li>
+<li>Parent/Student: Can view only</li>
+</ul>
+<hr>
+<h3 id="2-gallery-system">2. Gallery System</h3>
+<p><strong>What it does:</strong></p>
+<ul>
+<li>Multi-image upload capability (select multiple photos at once)</li>
+<li>Grid view with 2-column layout</li>
+<li>Full-screen image viewer with swipe gestures</li>
+<li>Delete functionality (Teacher only)</li>
+</ul>
+<p><strong>Key Files:</strong></p>
+<ul>
+<li><code>OtherScreens.kt</code> - GalleryScreen, GalleryDetailScreen</li>
+<li><code>GalleryViewModel.kt</code> - Image management</li>
+<li><code>GalleryRepositoryImpl.kt</code> - Firebase operations</li>
+</ul>
+<p><strong>Role-Based UI:</strong></p>
+<ul>
+<li>Teacher: See &quot;+&quot; button (add images) + delete overlays</li>
+<li>Parent/Student: Read-only view (no add/delete buttons)</li>
+</ul>
+<p><strong>Storage:</strong></p>
+<ul>
+<li>Images uploaded to Cloudinary cloud storage</li>
+<li>URLs stored in Firebase Firestore</li>
+</ul>
+<hr>
+<h3 id="3-achievements-system">3. Achievements System</h3>
+<p><strong>What it does:</strong></p>
+<ul>
+<li>Celebrate student achievements</li>
+<li>Like system (one-like-per-user, device-based for parents)</li>
+<li>Edit functionality for teachers</li>
+</ul>
+<p><strong>Key Files:</strong></p>
+<ul>
+<li><code>OtherScreens.kt</code> - AchievementsScreen</li>
+<li><code>AchievementViewModel.kt</code> - State &amp; operations</li>
+<li><code>AchievementRepositoryImpl.kt</code> - Firebase CRUD</li>
+</ul>
+<p><strong>Like System:</strong></p>
+<ul>
+<li>Students/Parents: Like achievements (tracked by device ID)</li>
+<li>Teachers: Can like + edit + delete</li>
+</ul>
+<p><strong>Kannada Translation:</strong></p>
+<ul>
+<li>&quot;Translate All&quot; button translates all achievements to Kannada using Gemini AI</li>
+<li>Auto-translation for title, description, and student name</li>
+</ul>
+<hr>
+<h3 id="4-feedback-system">4. Feedback System</h3>
+<p><strong>What it does:</strong></p>
+<ul>
+<li>Parents submit feedback anonymously</li>
+<li>AI-powered sentiment analysis (positive/negative/neutral)</li>
+<li>Teachers view all feedback</li>
+<li>Delete inappropriate feedback (Teacher only)</li>
+</ul>
+<p><strong>Sentiment Analysis:</strong></p>
+<ul>
+<li>Weighted keyword matching</li>
+<li>Negation handling</li>
+</ul>
+<p><strong>Key Files:</strong></p>
+<ul>
+<li><code>FeedbackListScreen.kt</code> - Feedback display</li>
+<li><code>FeedbackViewModel.kt</code> - Feedback operations</li>
+<li><code>SentimentAnalyzer.kt</code> - AI analysis (keyword-based)</li>
+</ul>
+<p><strong>Workflow:</strong></p>
+<pre class="hljs"><code><div>Parent submits feedback → Analyzed by SentimentAnalyzer → 
+Saved anonymously to Firebase → Teachers view in &quot;View Feedback&quot;
+</div></code></pre>
+<p><strong>Role Access:</strong></p>
+<ul>
+<li>Parent: Submit feedback (always anonymous)</li>
+<li>Teacher: View + delete feedback</li>
+</ul>
+<hr>
+<h3 id="5-language-toggle-kannadaenglish">5. Language Toggle (Kannada/English)</h3>
+<p><strong>What it does:</strong></p>
+<ul>
+<li>Toggle between Kannada and English</li>
+<li>All UI strings translated via <code>strings.xml</code> / <code>strings-kn.xml</code></li>
+<li>Dynamic content (announcements, achievements) support Kannada fields:
+<ul>
+<li><code>titleKn</code>, <code>descriptionKn</code> for achievements</li>
+<li><code>titleKn</code>, <code>contentKn</code> for announcements</li>
+</ul>
+</li>
+<li>AI-powered translation using Gemini API</li>
+</ul>
+<p><strong>Key Files:</strong></p>
+<ul>
+<li><code>LanguageViewModel.kt</code> - Language preference management</li>
+<li><code>GeminiHelper.kt</code> - AI translation service</li>
+<li><code>MainActivity.kt</code> - Locale application via <code>attachBaseContext()</code></li>
+</ul>
+<p><strong>How it works:</strong></p>
+<pre class="hljs"><code><div>User toggles language in Profile → Saves preference to SharedPreferences → 
+Recreates Activity → MainActivity applies locale → 
+All screens refresh with new language
+</div></code></pre>
+<hr>
+<h3 id="6-real-time-updates">6. Real-Time Updates</h3>
+<p><strong>What it does:</strong></p>
+<ul>
+<li>Firebase Firestore real-time listeners</li>
+<li>All users see changes instantly without refresh</li>
+<li>Live updates for meals, gallery, achievements, feedback</li>
+</ul>
+<p><strong>Implementation:</strong></p>
+<ul>
+<li>Uses <code>callbackFlow</code> in repositories</li>
+<li><code>SnapshotListener</code> on Firestore queries</li>
+<li>Automatic UI updates via Kotlin Flows</li>
+</ul>
+<hr>
+<h2 id="technical-architecture">Technical Architecture</h2>
+<h3 id="architecture-pattern-mvvm--repository">Architecture Pattern: MVVM + Repository</h3>
+<pre class="hljs"><code><div>┌──────────────────────────────────────────────────────┐
+│                        UI Layer                      │
+│       (Composable Functions - Jetpack Compose)       │
+└──────────────────┬───────────────────────────────────┘
+                    │
+                    ▼
+┌──────────────────────────────────────────────────────┐
+│                   ViewModel Layer                    │
+│            (State Management + Coroutines)           │
+└──────────────────┬───────────────────────────────────┘
+                    │
+                    ▼
+┌───────────────────────────────────────────────────┐
+│                 Repository Layer                  │
+│             (Abstracts data sources)              │
+└─── ───────────────┬───────────────────────────────┘
+                    │
+         ┌──────────┴──────────┐
+         ▼                     ▼
+ ┌──────────────┐    ┌──────────────────┐
+ │  Firebase    │    │    Cloudinary    │
+ │  Firestore   │    │    (Images)      │
+ └──────────────┘    └──────────────────┘
+</div></code></pre>
+<h2 id="technology-stack">Technology Stack</h2>
+<h3 id="frontend">Frontend</h3>
+<table>
+<thead>
+<tr>
+<th>Technology</th>
+<th>Purpose</th>
+<th>Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kotlin</td>
+<td>Programming language</td>
+<td>1.9+</td>
+</tr>
+<tr>
+<td>Jetpack Compose</td>
+<td>UI framework</td>
+<td>Latest</td>
+</tr>
+<tr>
+<td>Material 3</td>
+<td>Design system</td>
+<td>Latest</td>
+</tr>
+<tr>
+<td>Hilt</td>
+<td>Dependency injection</td>
+<td>Latest</td>
+</tr>
+<tr>
+<td>Kotlin Coroutines</td>
+<td>Async programming</td>
+<td>Latest</td>
+</tr>
+<tr>
+<td>Kotlin Flows</td>
+<td>Reactive streams</td>
+<td>Latest</td>
+</tr>
+</tbody>
+</table>
+<h3 id="backend">Backend</h3>
+<table>
+<thead>
+<tr>
+<th>Technology</th>
+<th>Purpose</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Firebase Firestore</td>
+<td>NoSQL database</td>
+<td>Real-time sync</td>
+</tr>
+<tr>
+<td>Firebase Storage</td>
+<td>File storage</td>
+<td>(Images via Cloudinary)</td>
+</tr>
+<tr>
+<td>Cloudinary</td>
+<td>Image hosting</td>
+<td>URL-based storage</td>
+</tr>
+<tr>
+<td>Gemini API</td>
+<td>AI translation</td>
+<td><code>gemini-2.5-pro</code> model</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="role-based-access-control">Role-Based Access Control</h2>
+<h3 id="user-roles">User Roles</h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Value</th>
+<th>Can Do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TEACHER</strong></td>
+<td><code>TEACHER</code></td>
+<td>Add meals, upload images, edit achievements, view/delete feedback</td>
+</tr>
+<tr>
+<td><strong>STUDENT</strong></td>
+<td><code>STUDENT</code></td>
+<td>View all content, like achievements (once per device)</td>
+</tr>
+<tr>
+<td><strong>PARENT</strong></td>
+<td><code>PARENT</code></td>
+<td>View all content, submit anonymous feedback, like achievements (device-based)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="role-assignment">Role Assignment</h3>
+<p>Roles assigned via email addresses:</p>
+<pre class="hljs"><code><div><span class="hljs-comment">// In UserRoleManager.kt</span>
+<span class="hljs-string">&quot;teacher@shale.com&quot;</span> → TEACHER role
+<span class="hljs-comment">// Others → STUDENT or PARENT based on registration</span>
+</div></code></pre>
+<h3 id="ui-visibility-matrix">UI Visibility Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>TEACHER</th>
+<th>STUDENT</th>
+<th>PARENT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add Meal</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>View Meal</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Add Gallery Images</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Delete Gallery Images</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Edit Achievement</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Delete Achievement</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Like Achievement</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Submit Feedback</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>View Feedback List</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Delete Feedback</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Kannada Toggle</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="database-schema">Database Schema</h2>
+<h3 id="firestore-collections">Firestore Collections</h3>
+<h4 id="1-meals-collection">1. <code>meals</code> Collection</h4>
+<pre class="hljs"><code><div><span class="hljs-keyword">data</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Meal</span>(
+    <span class="hljs-keyword">val</span> id: String = <span class="hljs-string">&quot;&quot;</span>,           <span class="hljs-comment">// Firestore document ID</span>
+    <span class="hljs-keyword">val</span> title: String = <span class="hljs-string">&quot;&quot;</span>,         <span class="hljs-comment">// e.g., &quot;Mid-Day Meal&quot;</span>
+    <span class="hljs-keyword">val</span> description: String = <span class="hljs-string">&quot;&quot;</span>,  <span class="hljs-comment">// Menu details</span>
+    <span class="hljs-keyword">val</span> imageUrl: String = <span class="hljs-string">&quot;&quot;</span>,    <span class="hljs-comment">// Photo URL</span>
+    <span class="hljs-keyword">val</span> date: Date = Date(),       <span class="hljs-comment">// Meal date</span>
+    <span class="hljs-keyword">val</span> createdAt: Date = Date(),
+    <span class="hljs-keyword">val</span> updatedAt: Date = Date()
+)
+</div></code></pre>
+<h4 id="2-galleries-collection">2. <code>galleries</code> Collection</h4>
+<pre class="hljs"><code><div><span class="hljs-keyword">data</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Gallery</span>(
+    <span class="hljs-keyword">val</span> id: String = <span class="hljs-string">&quot;&quot;</span>,
+    <span class="hljs-keyword">val</span> title: String = <span class="hljs-string">&quot;&quot;</span>,         <span class="hljs-comment">// e.g., &quot;Science Lab&quot;</span>
+    <span class="hljs-keyword">val</span> category: String = <span class="hljs-string">&quot;&quot;</span>,      <span class="hljs-comment">// LABS/LIBRARY/TOILETS/SPORTS</span>
+    <span class="hljs-keyword">val</span> images: List&lt;GalleryImage&gt; = emptyList(),
+    <span class="hljs-keyword">val</span> date: Date = Date()
+)
+
+<span class="hljs-keyword">data</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">GalleryImage</span>(
+    <span class="hljs-keyword">val</span> url: String = <span class="hljs-string">&quot;&quot;</span>,          <span class="hljs-comment">// Cloudinary URL</span>
+    <span class="hljs-keyword">val</span> uploadedAt: Date = Date()
+)
+</div></code></pre>
+<h4 id="3-achievements-collection">3. <code>achievements</code> Collection</h4>
+<pre class="hljs"><code><div><span class="hljs-keyword">data</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Achievement</span>(
+    <span class="hljs-keyword">val</span> id: String = <span class="hljs-string">&quot;&quot;</span>,
+    <span class="hljs-keyword">val</span> studentName: String = <span class="hljs-string">&quot;&quot;</span>,
+    <span class="hljs-keyword">val</span> studentNameKn: String = <span class="hljs-string">&quot;&quot;</span>,   <span class="hljs-comment">// Kannada translation</span>
+    <span class="hljs-keyword">val</span> title: String = <span class="hljs-string">&quot;&quot;</span>,           <span class="hljs-comment">// e.g., &quot;Science Fair Winner&quot;</span>
+    <span class="hljs-keyword">val</span> titleKn: String = <span class="hljs-string">&quot;&quot;</span>,         <span class="hljs-comment">// Kannada translation</span>
+    <span class="hljs-keyword">val</span> description: String = <span class="hljs-string">&quot;&quot;</span>,
+    <span class="hljs-keyword">val</span> descriptionKn: String = <span class="hljs-string">&quot;&quot;</span>,     <span class="hljs-comment">// Kannada translation</span>
+    <span class="hljs-keyword">val</span> category: Category = Category.ACADEMIC,
+    <span class="hljs-keyword">val</span> imageUrl: String = <span class="hljs-string">&quot;&quot;</span>,
+    <span class="hljs-keyword">val</span> likes: <span class="hljs-built_in">Int</span> = <span class="hljs-number">0</span>,
+    <span class="hljs-keyword">val</span> likedBy: List&lt;String&gt; = emptyList(),  <span class="hljs-comment">// Device IDs</span>
+    <span class="hljs-keyword">val</span> createdAt: Date = Date(),
+    <span class="hljs-keyword">val</span> updatedAt: Date = Date()
+)
+</div></code></pre>
+<h4 id="4-feedbacks-collection">4. <code>feedbacks</code> Collection</h4>
+<pre class="hljs"><code><div><span class="hljs-keyword">data</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Feedback</span>(
+    <span class="hljs-keyword">val</span> id: String = <span class="hljs-string">&quot;&quot;</span>,
+    <span class="hljs-keyword">val</span> message: String = <span class="hljs-string">&quot;&quot;</span>,
+    <span class="hljs-keyword">val</span> category: String = <span class="hljs-string">&quot;&quot;</span>,      <span class="hljs-comment">// MEAL_ISSUE/FACILITY/TEACHING/SAFETY/OTHER</span>
+    <span class="hljs-keyword">val</span> sentiment: String = <span class="hljs-string">&quot;&quot;</span>,    <span class="hljs-comment">// POSITIVE/NEGATIVE/NEUTRAL</span>
+    <span class="hljs-keyword">val</span> urgency: String = <span class="hljs-string">&quot;&quot;</span>,      <span class="hljs-comment">// URGENT/NORMAL</span>
+    <span class="hljs-keyword">val</span> summary: String = <span class="hljs-string">&quot;&quot;</span>,      <span class="hljs-comment">// AI-generated summary</span>
+    <span class="hljs-keyword">val</span> isAnonymous: <span class="hljs-built_in">Boolean</span> = <span class="hljs-literal">true</span>,
+    <span class="hljs-keyword">val</span> createdAt: Date = Date()
+)
+</div></code></pre>
+<h4 id="5-announcements-collection">5. <code>announcements</code> Collection</h4>
+<pre class="hljs"><code><div><span class="hljs-keyword">data</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Announcement</span>(
+    <span class="hljs-keyword">val</span> id: String = <span class="hljs-string">&quot;&quot;</span>,
+    <span class="hljs-keyword">val</span> title: String = <span class="hljs-string">&quot;&quot;</span>,
+    <span class="hljs-keyword">val</span> titleKn: String = <span class="hljs-string">&quot;&quot;</span>,        <span class="hljs-comment">// Kannada translation</span>
+    <span class="hljs-keyword">val</span> content: String = <span class="hljs-string">&quot;&quot;</span>,
+    <span class="hljs-keyword">val</span> contentKn: String = <span class="hljs-string">&quot;&quot;</span>,      <span class="hljs-comment">// Kannada translation</span>
+    <span class="hljs-keyword">val</span> createdAt: Date = Date()
+)
+</div></code></pre>
+<hr>
+<h2 id="frontend-implementation">Frontend Implementation</h2>
+<h3 id="ui-framework-jetpack-compose">UI Framework: Jetpack Compose</h3>
+<ul>
+<li><strong>Declarative UI</strong> - Kotlin-based UI code</li>
+<li><strong>State-driven</strong> - UI reacts to state changes</li>
+<li><strong>Material 3</strong> - Modern Android design system</li>
+</ul>
+<h3 id="key-screens">Key Screens</h3>
+<h4 id="1-homescreenkt">1. HomeScreen.kt</h4>
+<ul>
+<li>App entry point after login</li>
+<li>Shows quick access cards for: Meals, Gallery, Achievements, Feedback</li>
+<li>Kannada content support</li>
+</ul>
+<h4 id="2-mealsscreenkt">2. MealsScreen.kt</h4>
+<ul>
+<li>Displays today's meal prominently</li>
+<li>Previous meals in LazyColumn</li>
+<li>Full-screen image viewer</li>
+<li>Add meal FAB for teachers</li>
+</ul>
+<h4 id="3-galleryscreenkt-in-otherscreenskt">3. GalleryScreen.kt (in OtherScreens.kt)</h4>
+<ul>
+<li>2-column grid layout</li>
+<li>Delete overlay (Teacher only)</li>
+<li>Add images button (Teacher only)</li>
+<li>Navigates to GalleryDetailScreen</li>
+</ul>
+<h4 id="4-gallerydetailscreenkt">4. GalleryDetailScreen.kt</h4>
+<ul>
+<li>Full-screen image view</li>
+<li>Swipe left/right to navigate</li>
+<li>Delete button in top bar (Teacher only)</li>
+</ul>
+<h4 id="5-achievementsscreenkt">5. AchievementsScreen.kt</h4>
+<ul>
+<li>List of achievements with like counts</li>
+<li>Edit button</li>
+<li>Translate All button (Kannada mode)</li>
+<li>Like button with device-based tracking</li>
+</ul>
+<h4 id="6-feedbacklistscreenkt">6. FeedbackListScreen.kt</h4>
+<ul>
+<li>List of all feedback with sentiment badges</li>
+<li>Delete button (Teacher only)</li>
+<li>Confirmation dialogs</li>
+</ul>
+<h4 id="7-profilescreenskt">7. ProfileScreens.kt</h4>
+<ul>
+<li>Language toggle (Kannada/English)</li>
+<li>Role-based button placement:
+<ul>
+<li>Parent: &quot;Send Feedback&quot; ONLY</li>
+<li>Teacher: &quot;View Feedback&quot; ONLY</li>
+</ul>
+</li>
+</ul>
+<h3 id="theme--colors">Theme &amp; Colors</h3>
+<pre class="hljs"><code><div><span class="hljs-comment">// Primary Colors</span>
+Colors.TrustBlue      <span class="hljs-comment">// #1E88E5 - Trust, reliability</span>
+Colors.SuccessGreen    <span class="hljs-comment">// #4CAF50 - Positive actions</span>
+Colors.ErrorRed       <span class="hljs-comment">// #F44336 - Delete, errors</span>
+Colors.WarningOrange   <span class="hljs-comment">// #FF9800 - Warnings</span>
+Colors.MediumGray     <span class="hljs-comment">// #9E9E9E - Secondary text</span>
+Colors.White          <span class="hljs-comment">// #FFFFFF - Backgrounds</span>
+</div></code></pre>
+<hr>
+<h2 id="backend-implementation">Backend Implementation</h2>
+<h3 id="firebase-firestore">Firebase Firestore</h3>
+<p><strong>Real-time Database:</strong></p>
+<ul>
+<li>NoSQL document database</li>
+<li>Real-time listeners via <code>SnapshotListener</code></li>
+<li>Automatic synchronization across devices</li>
+</ul>
+<h3 id="cloudinary-image-storage">Cloudinary Image Storage</h3>
+<p><strong>Why Cloudinary over Firebase Storage:</strong></p>
+<ul>
+<li>Easier URL-based access</li>
+<li>Automatic image optimization</li>
+<li>Direct upload from Android</li>
+</ul>
+<p><strong>Upload Flow:</strong></p>
+<pre class="hljs"><code><div>User selects image → Copies to cache → Uploads to Cloudinary → 
+Gets URL → Saves URL to Firestore → Deletes temp file
+</div></code></pre>
+<h3 id="ai-translation-gemini-api">AI Translation: Gemini API</h3>
+<p><strong>Implementation:</strong> <code>GeminiHelper.kt</code></p>
+<ul>
+<li>Model: <code>gemini-2.5-pro</code> (better translation)</li>
+<li>Prompt: &quot;Translate this text to Kannada (meaning-based translation). Output ONLY in Kannada script, no English letters allowed&quot;</li>
+<li>Retry logic: Up to 3 attempts with <code>hasEnglish()</code> check</li>
+</ul>
+<hr>
+<h2 id="workflows">Workflows</h2>
+<h3 id="workflow-1-teacher-adds-daily-meal">Workflow 1: Teacher Adds Daily Meal</h3>
+<pre class="hljs"><code><div>1. Teacher logs in (role = TEACHER)
+2. Navigates to Meals tab
+3. Clicks &quot;Add Meal&quot; button
+4. Enters menu 
+5. Selects meal photo from gallery
+6. Clicks &quot;Upload&quot;
+7. ViewModel uploads image to Cloudinary
+8. Checks if meal exists for today (Firestore query)
+   - If YES: Updates existing meal document
+   - If NO: Creates new meal document
+9. UI updates automatically (real-time listener)
+</div></code></pre>
+<h3 id="workflow-2-parent-submits-feedback">Workflow 2: Parent Submits Feedback</h3>
+<pre class="hljs"><code><div>1. Parent logs in (role = PARENT)
+2. Navigates to Profile → &quot;Send Feedback&quot;
+3. Types feedback message (max 500 chars)
+4. Clicks &quot;Submit Feedback&quot;
+5. FeedbackViewModel calls SentimentAnalyzer.analyzeSentiment()
+   - Checks positive/negative keywords with weights
+   - Handles negation (&quot;not good&quot;, &quot;not bad&quot;)
+   - Detects urgency (urgent/normal)
+6. Feedback saved to Firestore with:
+   - sentiment = &quot;POSITIVE&quot;/&quot;NEGATIVE&quot;/&quot;NEUTRAL&quot;
+   - isAnonymous = true
+   - userId = &quot;&quot; (never stored)
+7. Success message shown → Navigates back
+</div></code></pre>
+<h3 id="workflow-3-teacher-edits-achievement">Workflow 3: Teacher Edits Achievement</h3>
+<pre class="hljs"><code><div>1. Teacher logs in (role = TEACHER)
+2. Navigates to Achievements tab
+3. Sees &quot;Edit Achievement&quot; button ON TOP (before student name)
+4. Clicks edit → Dialog appears with:
+   - Student Name field
+   - Achievement Title field
+5. Modifies both fields
+6. Clicks &quot;Update&quot;
+7. ViewModel calls updateAchievement()
+8. Achievement updated in Firestore
+9. UI refreshes via real-time listener
+</div></code></pre>
+<h3 id="workflow-4-language-toggle">Workflow 4: Language Toggle</h3>
+<pre class="hljs"><code><div>1. User navigates to Profile screen
+2. Toggles &quot;ಕನ್ನಡ&quot; / &quot;English&quot; switch
+3. Preference saved to SharedPreferences
+4. Activity recreated via `recreate()`
+5. MainActivity.attachBaseContext() applies saved local
+6. All screens refresh:
+   - Static strings: Loaded from strings-kn.xml / strings.xml
+   - Dynamic content: Displays Kn fields if available
+</div></code></pre>
+<hr>
+<h2 id="setup-instructions">Setup Instructions</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>Android Studio (latest version)</li>
+<li>JDK 17+</li>
+<li>Firebase account</li>
+<li>Cloudinary account</li>
+<li>Gemini API key</li>
+</ul>
+<h3 id="step-1-cloneopen-project">Step 1: Clone/Open Project</h3>
+<pre class="hljs"><code><div><span class="hljs-comment"># Project location</span>
+C:\Users\Chethan\OneDrive\Desktop\Shale-Namma Pride
+</div></code></pre>
+<h3 id="step-2-firebase-setup">Step 2: Firebase Setup</h3>
+<ol>
+<li>Go to <a href="https://console.firebase.google.com">Firebase Console</a></li>
+<li>Create project &quot;Shale-Namma Pride&quot;</li>
+<li>Add Android app with package <code>com.shalenamma.pride</code></li>
+<li>Download <code>google-services.json</code></li>
+<li>Place in <code>app/</code> directory</li>
+<li>Enable Firestore Database</li>
+<li>Enable Firebase Authentication (if needed)</li>
+</ol>
+<h3 id="step-3-cloudinary-setup">Step 3: Cloudinary Setup</h3>
+<ol>
+<li>Sign up at <a href="https://cloudinary.com">Cloudinary</a></li>
+<li>Get credentials:
+<ul>
+<li>Cloud name</li>
+<li>API Key</li>
+<li>API Secret</li>
+</ul>
+</li>
+<li>Add to <code>CloudinaryService.kt</code>:</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">private</span> <span class="hljs-keyword">const</span> <span class="hljs-keyword">val</span> CLOUD_NAME = <span class="hljs-string">&quot;your_cloud_name&quot;</span>
+<span class="hljs-keyword">private</span> <span class="hljs-keyword">const</span> <span class="hljs-keyword">val</span> API_KEY = <span class="hljs-string">&quot;your_api_key&quot;</span>
+<span class="hljs-keyword">private</span> <span class="hljs-keyword">const</span> <span class="hljs-keyword">val</span> API_SECRET = <span class="hljs-string">&quot;your_api_secret&quot;</span>
+</div></code></pre>
+<h3 id="step-4-gemini-api-setup">Step 4: Gemini API Setup</h3>
+<ol>
+<li>Get API key from <a href="https://ai.google.dev/">Google AI Studio</a></li>
+<li>Add to <code>GeminiHelper.kt</code>:</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">private</span> <span class="hljs-keyword">const</span> <span class="hljs-keyword">val</span> API_KEY = <span class="hljs-string">&quot;your_gemini_api_key&quot;</span>
+</div></code></pre>
+<h3 id="step-5-build--run">Step 5: Build &amp; Run</h3>
+<pre class="hljs"><code><div><span class="hljs-comment"># Clean build</span>
+.\gradlew.bat clean
+
+<span class="hljs-comment"># Install on device</span>
+.\gradlew.bat installDebug
+
+<span class="hljs-comment"># Or build APK</span>
+.\gradlew.bat assembleDebug
+</div></code></pre>
+<h3 id="step-6-test-roles">Step 6: Test Roles</h3>
+<p>Set up test accounts:</p>
+<ul>
+<li><code>teacher@shale.com</code> → Teacher role</li>
+<li>Any other email → Student/Parent role</li>
+</ul>
+<hr>
+<hr>
+<h2 id="uiux-guidelines">UI/UX Guidelines</h2>
+<h3 id="design-principles">Design Principles</h3>
+<ol>
+<li><strong>Child-Friendly</strong> - Warm colors, rounded corners, emojis</li>
+<li><strong>Accessible</strong> - Kannada/English toggle</li>
+<li><strong>Role-Appropriate</strong> - Users only see what they need</li>
+<li><strong>Real-Time</strong> - Instant updates without refresh</li>
+</ol>
+<h3 id="emojis-used">Emojis Used</h3>
+<ul>
+<li>👤 (Profile)</li>
+<li>👨‍🏫 (Teacher)</li>
+<li>👨‍👩‍👧 (Parent/Child)</li>
+<li>🎓 (Achievement)</li>
+<li>🍱 (Meals)</li>
+<li>🖼️ (Gallery)</li>
+<li>💬 (Feedback)</li>
+</ul>
+<h3 id="confirmation-dialogs">Confirmation Dialogs</h3>
+<p>All destructive actions use confirmation dialogs:</p>
+<ul>
+<li>Delete feedback: &quot;Are you sure you want to delete this feedback?&quot;</li>
+<li>Delete image: &quot;Are you sure you want to delete this image?&quot;</li>
+<li>Delete achievement: &quot;Are you sure you want to delete this achievement?&quot;</li>
+</ul>
+<h3 id="loading-states">Loading States</h3>
+<ul>
+<li><code>CircularProgressIndicator</code> for async operations</li>
+<li>Disabled buttons during loading</li>
+<li>Success messages after operations</li>
+</ul>
+<hr>
+<h2 id="appendix-file-structure">Appendix: File Structure</h2>
+<pre class="hljs"><code><div>app/src/main/java/com/shalenamma/pride/
+├── ShaleNammaPrideApp.kt          # Application class
+├── MainActivity.kt                   # Entry point + locale
+│
+├── ai/
+│   └── GeminiHelper.kt             # AI translation
+│   └── SentimentAnalyzer.kt        # Feedback sentiment analysis
+│
+├── data/
+│   ├── models/                     # Data classes
+│   │   ├── Meal.kt
+│   │   ├── Gallery.kt
+│   │   ├── GalleryImage.kt
+│   │   ├── Achievement.kt
+│   │   ├── Feedback.kt
+│   │   └── Announcement.kt
+│   │
+│   └── repository/
+│       ├── MealRepository.kt
+│       ├── GalleryRepository.kt
+│       ├── AchievementRepository.kt
+│       ├── FeedbackRepository.kt
+│       └── impl/
+│           ├── MealRepositoryImpl.kt
+│           ├── GalleryRepositoryImpl.kt
+│           ├── AchievementRepositoryImpl.kt
+│           └── FeedbackRepositoryImpl.kt
+│
+├── ui/
+│   ├── theme/
+│   │   ├── Theme.kt
+│   │   ├── Colors.kt
+│   │   ├── Spacing.kt
+│   │   └── DesignTokens.kt
+│   │
+│   ├── components/
+│   │   └── ShaleNammaComponents.kt  # Reusable UI components
+│   │
+│   ├── screens/
+│   │   ├── HomeScreen.kt
+│   │   ├── MealsScreen.kt
+│   │   ├── OtherScreens.kt        # Gallery + Achievements + Feedback
+│   │   ├── FeedbackListScreen.kt
+│   │   ├── ProfileScreens.kt
+│   │   ├── LoginScreen.kt
+│   │   ├── SignupScreen.kt
+│   │   └── SplashScreen.kt
+│   │
+│   └── viewmodels/
+│       ├── MealViewModel.kt
+│       ├── GalleryViewModel.kt
+│       ├── AchievementViewModel.kt
+│       ├── FeedbackViewModel.kt
+│       ├── LanguageViewModel.kt
+│       └── UserSessionViewModel.kt
+│
+└── utils/
+    ├── UserRoleManager.kt
+    └── DeviceIdManager.kt
+</div></code></pre>
+<hr>
+<h2 id="project-status--complete">Project Status: ✅ COMPLETE</h2>
+<p><strong>All features implemented and tested:</strong></p>
+<ul>
+<li>✅ Meals system with rotation</li>
+<li>✅ Gallery with role-based UI (Teacher/Parent only)</li>
+<li>✅ Achievements with conditional edit (Teacher only)</li>
+<li>✅ Feedback with sentiment analysis (Parent submits, Teacher manages)</li>
+<li>✅ Kannada/English toggle</li>
+<li>✅ Real-time Firebase updates</li>
+<li>✅ Material 3 UI</li>
+<li>✅ Build successful</li>
+</ul>
+
+</body>
+</html>

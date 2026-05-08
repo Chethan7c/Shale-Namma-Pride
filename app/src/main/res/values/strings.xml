@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Shale-Namma Pride</string>
+    <string name="app_description">School Transparency Portal</string>
+
+    <string name="home">Home</string>
+    <string name="meals">Meals</string>
+    <string name="gallery">Gallery</string>
+    <string name="achievements">Achievements</string>
+    <string name="profile">Profile</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="today_meal">Today\'s Meal</string>
+    <string name="previous_meals">Previous Meals</string>
+    <string name="add_today_meal">Add Today\'s Meal</string>
+    <string name="meal_name">Meal Name</string>
+    <string name="meal_name_hint">e.g., Biryani, Sambar Rice</string>
+    <string name="add_image">Add Image</string>
+    <string name="no_image_url">No image URL saved</string>
+    <string name="no_previous_meals">No previous meals</string>
+    <string name="todays_meal_not_updated">Today\'s meal is not updated until the new today\'s meal is updated</string>
+
+    <string name="announcements">Announcements</string>
+    <string name="no_announcements">No announcements yet</string>
+    <string name="add_announcement">Add Announcement</string>
+    <string name="announcement_title">Announcement title</string>
+    <string name="announcement_content">Announcement content</string>
+
+    <string name="share_your_feedback">Share your feedback to help us improve</string>
+    <string name="feedback_about">What\'s your feedback about?</string>
+    <string name="feedback_message">Your Message</string>
+    <string name="submit_anonymously">Submit Anonymously</string>
+    <string name="submit_feedback">Submit Feedback</string>
+    <string name="view_feedback">View Feedback</string>
+    <string name="no_feedback">No feedback submitted yet</string>
+    <string name="feedback_category_hint">Facility, Meal, Teaching, Safety, Other</string>
+    <string name="send_feedback">Send Feedback</string>
+
+    <string name="sign_out">Sign Out</string>
+    <string name="account_information">Account Information</string>
+    <string name="email">Email</string>
+    <string name="role">Role</string>
+    <string name="actions">Actions</string>
+
+    <string name="language_toggle">Language / ಭಾಷೆ</string>
+    <string name="english">English</string>
+    <string name="kannada">ಕನ್ನಡ</string>
+
+    <string name="admin">ADMIN</string>
+    <string name="teacher">TEACHER</string>
+    <string name="parent">PARENT</string>
+    <string name="admin_dashboard">Admin Dashboard</string>
+    <string name="engagement_metrics">Engagement Metrics</string>
+    <string name="daily_active_users">Daily Active Users</string>
+    <string name="monthly_active_users">Monthly Active Users</string>
+    <string name="content_management">Content Management</string>
+    <string name="total_posts">Total Posts This Month</string>
+    <string name="total_engagement">Total Engagement</string>
+    <string name="quick_actions">Quick Actions</string>
+    <string name="post_meal_update">+ Post Meal Update</string>
+    <string name="post_achievement">+ Post Achievement</string>
+
+    <string name="who_are_you">Who are you?</string>
+    <string name="im_teacher">I\'m a Teacher</string>
+    <string name="im_parent">I\'m a Parent</string>
+    <string name="shale_namma_pride">Shale-Namma Pride</string>
+    <string name="splash_subtitle">School Transparency &amp; Community Trust Portal</string>
+
+    <string name="student_achievements">Student Achievements</string>
+    <string name="add_achievement">Add Achievement</string>
+    <string name="student_name">Student Name</string>
+    <string name="student_name_hint">e.g., Raj Kumar</string>
+    <string name="achievement_title">Achievement Title</string>
+    <string name="achievement_title_hint">e.g., Science Fair Winner</string>
+    <string name="edit_achievement">Edit Achievement</string>
+    <string name="update">Update</string>
+    <string name="add">Add</string>
+
+    <string name="notifications">Notifications</string>
+    <string name="view_feedback_list">View Feedback</string>
+    <string name="no_photo">No photos added yet</string>
+    <string name="gallery_title_hint">e.g., Science Lab, Sports Ground</string>
+    <string name="add_gallery_photo">Add Gallery Photo</string>
+    <string name="school_facilities">School Facilities</string>
+    <string name="splash_message">Empowering Schools</string>
+    <string name="back">Back</string>
+    <string name="sample_meals_achievements">Meals: 28 | Achievements: 12</string>
+    <string name="sample_engagement_stats">Views: 4.2K | Shares: 340 | Likes: 2.1K</string>
+</resources>

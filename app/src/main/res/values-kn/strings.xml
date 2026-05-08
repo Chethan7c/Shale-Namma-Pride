@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ಶಾಲೆ-ನಮ್ಮ ಪ್ರೈಡ್</string>
+    <string name="app_description">ಶಾಲೆ ಪಾರದರ್ಶಕತೆ ಪೋರ್ಟಲ್</string>
+
+    <string name="home">ಮುಖಪುಟ</string>
+    <string name="meals">ಊಟ</string>
+    <string name="gallery">ಗ್ಯಾಲರಿ</string>
+    <string name="achievements">ಸಾಧನೆಗಳು</string>
+    <string name="profile">ಪ್ರೊಫೈಲ್</string>
+    <string name="sign_in">ಸೈನ್ ಇನ್</string>
+    <string name="sign_up">ಸೈನ್ ಅಪ್</string>
+    <string name="submit">ಸಲ್ಲಿಸು</string>
+    <string name="cancel">ರದ್ದು ಮಾಡು</string>
+
+    <string name="today_meal">ಇಂದಿನ ಊಟ</string>
+    <string name="previous_meals">ಹಿಂದಿನ ಊಟ</string>
+    <string name="add_today_meal">ಇಂದಿನ ಊಟ ಸೆರಿಸು</string>
+    <string name="meal_name">ಊಟ ಹೆಸರು</string>
+    <string name="meal_name_hint">ಉದಾ., ಬಿರ್ಯಾಣಿ, ಸಾಂಬಾರ್ ಅನ್ನ</string>
+    <string name="add_image">ಚಿತ್ರ ಸೆರಿಸು</string>
+    <string name="no_image_url">ಚಿತ್ರ URL ಸಿಗ್ಗದೆ</string>
+    <string name="no_previous_meals">ಹಿಂದಿನ ಊಟ ಇಲ್ಲ</string>
+    <string name="todays_meal_not_updated">ಇಂದಿನ ಊಟ ಇನ್ನೂ ನವೀಕರಿಸಲಾಗಿಲ್ಲ</string>
+
+    <string name="announcements">ಘೋಷಣೆಗಳು</string>
+    <string name="no_announcements">ಇನ್ನೂ ಯಾವುದೇ ಘೋಷಣೆಗಳಿಲ್ಲ</string>
+    <string name="add_announcement">ಘೋಷಣೆ ಸೆರಿಸು</string>
+    <string name="announcement_title">ಘೋಷಣೆ ಶೀರ್ಷಿಕೆ</string>
+    <string name="announcement_content">ಘೋಷಣೆ ವಿಷಯ</string>
+
+    <string name="share_your_feedback">ನಮ್ಮ ಅಭಿಪ್ರಾಯವನ್ನು ಹಂಚಿಕೊಳ್ಳಿ</string>
+    <string name="feedback_about">ನಿಮ್ಮ ಅಭಿಪ್ರಾಯ ಏನ ಬಗ್ಗೆ?</string>
+    <string name="feedback_message">ನಿಮ್ಮ ಸಂದೇಶ</string>
+    <string name="submit_anonymously">ಅನಾಮಧಾರಿಯಾಗಿ ಸಲ್ಲಿಸು</string>
+    <string name="submit_feedback">ಅಭಿಪ್ರಾಯ ಸಲ್ಲಿಸು</string>
+    <string name="view_feedback">ಅಭಿಪ್ರಾಯ ವೀಕ್ಷಿಸು</string>
+    <string name="no_feedback">ಇನ್ನೂ ಯಾವುದೇ ಅಭಿಪ್ರಾಯ ಸಲ್ಲಿಸಿಲ್ಲ</string>
+    <string name="feedback_category_hint">ಸೌಕರ್ಯ, ಊಟ, ಬೋಧನೆ, ಸುರಕ್ಷೆ, ಇತರ</string>
+    <string name="send_feedback">ಅಭಿಪ್ರಾಯ ಕಳುಹಿಸು</string>
+
+    <string name="sign_out">ಸೈನ್ ಔಟ್</string>
+    <string name="account_information">ಖಾತೆ ಮಾಹಿತಿ</string>
+    <string name="email">ಇಮೇಲ್</string>
+    <string name="role">ಪಾತ್ರ</string>
+    <string name="actions">ಕಾರ್ಯಗಳು</string>
+
+    <string name="language_toggle">ಭಾಷೆ / ಕನ್ನಡ</string>
+    <string name="english">ಇಂಗ್ಲೀಷ್</string>
+    <string name="kannada">ಕನ್ನಡ</string>
+
+    <string name="admin">ಅಡ್ಮಿನ್</string>
+    <string name="teacher">ಶಿಕ್ಷಕ</string>
+    <string name="parent">ಪೋಷಕ</string>
+    <string name="admin_dashboard">ಅಡ್ಮಿನ್ ಡ್ಯಾಶ್ಬೋರ್ಡ್</string>
+    <string name="engagement_metrics">ತೊಡಗಾರಿಕೆ ಮೆಟ್ರಿಕ್ಸ್</string>
+    <string name="daily_active_users">ದೈನಂದಿನ ಸಕ್ರಿಯ ಬಳಕೆದಾರರು</string>
+    <string name="monthly_active_users">ಮಾಸಿಕ ಸಕ್ರಿಯ ಬಳಕೆದಾರರು</string>
+    <string name="content_management">ವಿಷಯ ನಿರ್ವಹಣೆ</string>
+    <string name="total_posts">ಈ ತಿಂಗಳಿನ ಒಟ್ಟು ಪೋಸ್ಟ್ಗಳು</string>
+    <string name="total_engagement">ಒಟ್ಟು ತೊಡಗಾರಿಕೆ</string>
+    <string name="quick_actions">ತ್ವರಿತ ಕಾರ್ಯಗಳು</string>
+    <string name="post_meal_update">+ ಊಟ್ ನವೀಕರಣ</string>
+    <string name="post_achievement">+ ಸಾಧನೆ ಸೆರಿಸು</string>
+
+    <string name="who_are_you">ನೀವು ಯಾರು?</string>
+    <string name="im_teacher">ನಾನು ಶಿಕ್ಷಕ</string>
+    <string name="im_parent">ನಾನು ಪೋಷಕ</string>
+    <string name="shale_namma_pride">ಶಾಲೆ-ನಮ್ಮ ಪ್ರೈಡ್</string>
+    <string name="splash_subtitle">ಶಾಲೆ ಪಾರದರ್ಶಕತೆ &amp; ಸಮುದಾಯ ಟ್ರಸ್ಟ್ ಪೋರ್ಟಲ್</string>
+
+    <string name="student_achievements">ವಿದ್ಯಾರ್ಥಿ ಸಾಧನೆಗಳು</string>
+    <string name="add_achievement">ಸಾಧನೆ ಸೆರಿಸು</string>
+    <string name="student_name">ವಿದ್ಯಾರ್ಥಿ ಹೆಸರು</string>
+    <string name="student_name_hint">ಉದಾ., ರಾಜ್ ಕುಮಾರ್</string>
+    <string name="achievement_title">ಸಾಧನೆ ಶೀರ್ಷಿಕೆ</string>
+    <string name="achievement_title_hint">ಉದಾ., ವಿಜ್ಞಾನ ಮೆಲ್ವೆ ವಿಜೇತ</string>
+    <string name="edit_achievement">ಸಾಧನೆ ಸಂಪಾದಿಸು</string>
+    <string name="update">ನವೀಕರಿಸು</string>
+    <string name="add">ಸೆರಿಸು</string>
+
+    <string name="notifications">ನೋಟಿಫಿಕೇಶನ್ಗಳು</string>
+    <string name="view_feedback_list">ಅಭಿಪ್ರಾಯ ವೀಕ್ಷಿಸು</string>
+    <string name="no_photo">ಇನ್ನೂ ಯಾವುದೇ ಚಿತ್ರಗಳಿಲ್ಲ</string>
+    <string name="gallery_title_hint">ಉದಾ., ವಿಜ್ಞಾನ ಲ್ಯಾಬ್, ಕ್ರೀಡ್ ಮೈದಾನ</string>
+    <string name="add_gallery_photo">ಗ್ಯಾಲರಿ ಚಿತ್ರ ಸೆರಿಸು</string>
+    <string name="school_facilities">ಶಾಲೆ ಸೌಕರ್ಯಗಳು</string>
+    <string name="splash_message">ಶಾಲೆಗಳನ್ನು ಸಬಲೀಕರಿಸುವುದು</string>
+    <string name="back">ಹಿಂದೆ</string>
+    <string name="sample_meals_achievements">ಊಟ: 28 | ಸಾಧನೆಗಳು: 12</string>
+    <string name="sample_engagement_stats">ವೀಕ್ಷಣೆಗಳು: 4.2K | ಹಂಚಿಕೆಗಳು: 340 | ಇಷ್ಟಗಳು: 2.1K</string>
+</resources>
