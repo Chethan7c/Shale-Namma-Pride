@@ -2,9 +2,9 @@
 
 A "School Transparency & Pride" Android app that showcases daily school life to rebuild trust between government schools and parents.
 
-[![Download APK](https://img.shields.io/badge/Download-APK-green?style=for-the-badge&logo=android)](https://github.com/CHETHANBABUBC/Shale-Namma-Pride/releases/latest)
+[![Download APK](https://img.shields.io/badge/Download-APK-green?style=for-the-badge&logo=android)](https://github.com/Chethan7c/Shale-Namma-Pride/releases/latest)
 
-> **Download the app:** Visit the [Releases](https://github.com/CHETHANBABUBC/Shale-Namma-Pride/releases/latest) page to download the latest APK.
+> **Download the app:** Visit the [Releases](https://github.com/Chethan7c/Shale-Namma-Pride/releases/latest) page to download the latest APK.
 
 ---
 
